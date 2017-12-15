@@ -1,0 +1,29 @@
+'''
+this is my first day to learn python 
+i want to build a small game which will provide 2 feiends to guess age
+'''
+# !/user/bin/env python
+# -*-coding: utf-8-*-
+# Writen by Jack
+
+age =int(input("Please input your age,and never tell your competitor:"))
+counter = 0
+for i in range(10):
+    if counter <3:
+        guess_num=int(input("input your guess number:"))
+        if guess_num == age :
+            print("congratulations! you got it.")
+            break
+        elif guess_num>age :
+            print("too big!")
+        else:
+            print("too small!")
+    else:
+        continue_confirm = input("Do you want to continue?(y/n)")
+        if continue_confirm=='y':
+            counter = 0
+            continue
+        else:
+            print("Sorry, my friend.You have try too many times!")
+            break
+    counter +=1
